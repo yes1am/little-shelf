@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="books-container">
+  <!-- loading -->
+  <block wx:if="{{loading}}">
+    <view class="donut-container">
+      <view class="donut"></view>
+    </view>
+  </block>
+  <swiper wx:else class="swiper" indicator-dots="{{showIndicatorDots}}" duration="{{duration}}" previous-margin="{{sideMargin}}" next-margin="{{sideMargin}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}">
+    <block wx:for="{{books}}" wx:key="bkid">
+      <swiper-item class="swiper-item">
+        <view class="book-container bg-white" hover-class="book-container-hover" catchtap="goDetail" data-author="{{item.bkauthor}}" data-category="{{item.category}}" data-image="{{item.bkcover}}" data-id="{{item.bkid}}" data-name="{{item.bkname}}" data-price="{{item.bkprice}}" data-publisher="{{item.bkpublisher}}" data-file="{{item.bkfile}}">
+          <view class="book-image">
+            <image src="{{item.bkcover}}" mode="scaleToFill"></image>
+          </view>
+          <view class="book-info">
+            <text class="book-name">{{item.bkname}}</text>
+            <text class="author">{{item.bkauthor}}</text>
+            <text class="publisher">{{item.bkpublisher}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

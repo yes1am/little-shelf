@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/books/index",
+    "pages/me/index",
+    "pages/myBooks/index",
+    "pages/bookDetail/index",
+    "pages/comment/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/books/index",
+        "text": "书架",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/bookSelected.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/meSelected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
